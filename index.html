@@ -378,21 +378,21 @@ person.friends.firstName</code></pre>
 }</code></pre>
   </div>
 
-  <div class="slide" id="react">
+  <div class="cover slide" id="react">
     <h2>
       Through <em>React</em> components, we tap into<br>
       a large front-end developer community.
     </h2>
-    <pre><code>&lt;div&gt;
-  &lt;h1&gt;Solid App&lt;/h1&gt;
-  &lt;AuthButton popup="popup.html"/&gt;
-  &lt;LoggedInPane&gt;
-    &lt;p&gt;Welcome back, &lt;DataField data="user.firstName"/&gt;.&lt;/p&gt;
-  &lt;/LoggedInPane&gt;
-  &lt;LoggedOutPane&gt;
-    &lt;p&gt;You are logged out.&lt;/p&gt;
-  &lt;/LoggedOutPane&gt;
-&lt;/div&gt;</code></pre>
+    <pre><code>&lt;LoggedIn&gt;
+  &lt;p&gt;Welcome, <mark>&lt;Value src="user.firstName"/&gt;</mark>&lt;/p&gt;
+  <span class="next"><mark>&lt;Image src="user.image" defaultSrc="profile.svg"/&gt;</mark></span>
+  <span class="next">&lt;ul&gt;
+    &lt;li&gt;<mark>&lt;Link href="user.inbox"&gt;Your inbox&lt;/Link&gt;</mark>&lt;/li&gt;
+    &lt;li&gt;&lt;Link href="user.homepage"&gt;Your homepage&lt;/Link&gt;&lt;/li&gt;
+  &lt;/ul&gt;</span>
+  <span class="next">&lt;h2&gt;Your friends&lt;/h2&gt;
+  <mark>&lt;List src="user.friends.firstName"/&gt;</mark></span>
+&lt;/LoggedIn&gt;</code></pre>
   </div>
 
   <div class="toc slide" id="recap">
